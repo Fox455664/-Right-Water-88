@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="كتالوج منتجات شركة رايت ووتر لحلول معالجة المياه" />
     <meta name="author" content="Right Water" />
-    <title>قائمة منتجات - Right Water</title>
+    <title>كتالوج منتجات - Right Water</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons -->
@@ -69,7 +69,7 @@
             font-weight: 700;
         }
 
-        /* === أقسام المنتجات (تصميم القائمة) === */
+        /* === أقسام المنتجات (تصميم البطاقات) === */
         .product-section {
             padding: 80px 15px;
         }
@@ -82,40 +82,43 @@
             margin-bottom: 50px;
             text-align: center;
         }
-        .product-list-group .list-group-item {
-            margin-bottom: 15px;
-            border-radius: 12px !important;
-            border: 1px solid #e9ecef;
-            padding: 1rem 1.5rem;
-            transition: all 0.2s ease-in-out;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-        .product-list-group .list-group-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(13, 110, 253, 0.1);
-            border-color: #0d6efd;
-        }
-        
-        .product-list-img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-            border-radius: 8px;
+        .product-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
             background-color: #fff;
+            width: 280px;
+            margin: 15px;
         }
-        
-        .product-list-name {
-            font-weight: 700;
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(13, 110, 253, 0.15);
+        }
+        .product-card-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .product-card .card-body {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .product-card .card-title {
             font-size: 1.2rem;
+            font-weight: 700;
             color: #343a40;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
-        .product-list-price {
-            font-weight: 700;
-            font-size: 1.2rem;
+        .product-card .price {
+            font-size: 1.3rem;
+            font-weight: 900;
             color: #0d6efd;
-            min-width: 120px;
-            text-align: left;
+            margin-top: 10px;
         }
 
         /* === قسم الدعوة للتواصل (CTA) === */
@@ -145,7 +148,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#hero">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#filter-stages">المنتجات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">المنتجات</a></li>
                     <li class="nav-item"><a class="nav-link" href="#cta">تواصل معنا</a></li>
                 </ul>
             </div>
@@ -157,100 +160,108 @@
         <div class="container">
             <h1>Right Water</h1>
             <p>الجودة والنقاء في كل قطرة</p>
-            <a href="#filter-stages" class="btn btn-outline-light btn-lg mt-3">تصفح منتجاتنا</a>
+            <a href="#products" class="btn btn-outline-light btn-lg mt-3">تصفح منتجاتنا</a>
         </div>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- قسم فلاتر ومراحل التنقية -->
-        <section id="filter-stages" class="product-section">
+        <!-- قسم المنتجات -->
+        <section id="products" class="product-section">
             <div class="container">
                 <h2 class="section-title">فلاتر ومراحل التنقية</h2>
-                <div class="col-lg-10 mx-auto">
-                    <ul class="list-group product-list-group">
-                        
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="assets/pps-sediment.jpg" alt="PPS Sediment Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">فلتر الرواسب (المرحلة الأولى)</h5>
-                            </div>
-                            <span class="product-list-price"></span>
-                        </li>
-                        
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="assets/gac-granule-carbon.jpg" alt="GAC Granule Carbon Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">فلتر الكربون الحبيبي (المرحلة الثانية)</h5>
-                            </div>
-                            <span class="product-list-price"></span>
-                        </li>
-                        
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="assets/cto-block-carbon.jpg" alt="CTO Block Carbon Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">فلتر الكربون المصمت (المرحلة الثالثة)</h5>
-                            </div>
-                            <span class="product-list-price"></span>
-                        </li>
+                <div class="d-flex flex-wrap justify-content-center">
+                    
+                    <!-- بطاقة المنتج 1 -->
+                    <div class="card product-card">
+                        <img src="assets/pps-sediment.jpg" class="product-card-img" alt="فلتر الرواسب">
+                        <div class="card-body">
+                            <h5 class="card-title">فلتر الرواسب (المرحلة الأولى)</h5>
+                            <div class="price"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- بطاقة المنتج 2 -->
+                    <div class="card product-card">
+                        <img src="assets/gac-granule-carbon.jpg" class="product-card-img" alt="فلتر الكربون الحبيبي">
+                        <div class="card-body">
+                            <h5 class="card-title">فلتر الكربون الحبيبي (المرحلة الثانية)</h5>
+                            <div class="price"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- بطاقة المنتج 3 -->
+                    <div class="card product-card">
+                        <img src="assets/cto-block-carbon.jpg" class="product-card-img" alt="فلتر الكربون المصمت">
+                        <div class="card-body">
+                            <h5 class="card-title">فلتر الكربون المصمت (المرحلة الثالثة)</h5>
+                            <div class="price"></div>
+                        </div>
+                    </div>
 
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="assets/membrane-filter.jpg" alt="Membrane Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">الممبرين (المرحلة الرابعة)</h5>
-                            </div>
-                            <span class="product-list-price"></span>
-                        </li>
+                    <!-- بطاقة المنتج 4 -->
+                    <div class="card product-card">
+                        <img src="assets/membrane-filter.jpg" class="product-card-img" alt="الممبرين">
+                        <div class="card-body">
+                            <h5 class="card-title">الممبرين (المرحلة الرابعة)</h5>
+                            <div class="price"></div>
+                        </div>
+                    </div>
 
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="assets/post-carbon.jpg" alt="Post Carbon Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">فلتر البوست كربون (المرحلة الخامسة)</h5>
-                            </div>
-                            <span class="product-list-price"></span>
-                        </li>
-                        
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="assets/mineral-filter.jpg" alt="Mineral Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">فلتر المعادن (الكالسيت)</h5>
-                            </div>
-                            <span class="product-list-price"></span>
-                        </li>
+                    <!-- بطاقة المنتج 5 -->
+                    <div class="card product-card">
+                        <img src="assets/post-carbon.jpg" class="product-card-img" alt="فلتر البوست كربون">
+                        <div class="card-body">
+                            <h5 class="card-title">فلتر البوست كربون (المرحلة الخامسة)</h5>
+                            <div class="price"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- بطاقة المنتج 6 -->
+                    <div class="card product-card">
+                        <img src="assets/post-carbon-gold-ring.jpg" class="product-card-img" alt="بوست كربون بحلقة ذهبية">
+                        <div class="card-body">
+                            <h5 class="card-title">بوست كربون (حلقة ذهبية)</h5>
+                            <div class="price"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- بطاقة المنتج 7 -->
+                    <div class="card product-card">
+                        <img src="assets/mineral-filter.jpg" class="product-card-img" alt="فلتر المعادن">
+                        <div class="card-body">
+                            <h5 class="card-title">فلتر المعادن (الكالسيت)</h5>
+                            <div class="price"></div>
+                        </div>
+                    </div>
 
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="assets/ph-stabilizer-green.jpg" alt="Stabilizer Ph Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">فلتر قلونة المياه (pH)</h5>
-                            </div>
-                            <span class="product-list-price"></span>
-                        </li>
+                    <!-- بطاقة المنتج 8 -->
+                    <div class="card product-card">
+                        <img src="assets/ph-stabilizer-green.jpg" class="product-card-img" alt="فلتر قلونة المياه">
+                        <div class="card-body">
+                            <h5 class="card-title">فلتر قلونة المياه (pH)</h5>
+                            <div class="price"></div>
+                        </div>
+                    </div>
 
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="assets/mineral-filter-purple.jpg" alt="Mineral Filter Purple" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">فلتر المعادن (بنفسجي)</h5>
-                            </div>
-                            <span class="product-list-price"></span>
-                        </li>
+                    <!-- بطاقة المنتج 9 -->
+                    <div class="card product-card">
+                        <img src="assets/mineral-filter-purple.jpg" class="product-card-img" alt="فلتر المعادن البنفسجي">
+                        <div class="card-body">
+                            <h5 class="card-title">فلتر المعادن (بنفسجي)</h5>
+                            <div class="price"></div>
+                        </div>
+                    </div>
 
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="assets/gold-mineral-filter.jpg" alt="Gold Mineral Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">الفلتر الذهبي (Gold Mineral)</h5>
-                            </div>
-                            <span class="product-list-price"></span>
-                        </li>
-                        
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <img src="assets/post-carbon-gold-ring.jpg" alt="Post Carbon with Gold Ring" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">بوست كربون (حلقة ذهبية)</h5>
-                            </div>
-                            <span class="product-list-price"></span>
-                        </li>
-                        
-                    </ul>
+                    <!-- بطاقة المنتج 10 -->
+                    <div class="card product-card">
+                        <img src="assets/gold-mineral-filter.jpg" class="product-card-img" alt="الفلتر الذهبي">
+                        <div class="card-body">
+                            <h5 class="card-title">الفلتر الذهبي (Gold Mineral)</h5>
+                            <div class="price"></div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -277,7 +288,7 @@
                     <h5>روابط سريعة</h5>
                     <ul class="list-unstyled">
                         <li><a href="#hero">الرئيسية</a></li>
-                        <li><a href="#filter-stages">المنتجات</a></li>
+                        <li><a href="#products">المنتجات</a></li>
                         <li><a href="#cta">اتصل بنا</a></li>
                     </ul>
                 </div>
