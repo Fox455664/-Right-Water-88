@@ -117,6 +117,19 @@
             min-width: 120px;
             text-align: left;
         }
+
+        /* === قسم الدعوة للتواصل (CTA) === */
+        .cta-section { background: linear-gradient(90deg, #0d6efd, #0dcaf0); color: white; padding: 60px 15px; text-align: center; }
+        .cta-section h2 { font-weight: 700; margin-bottom: 1rem; }
+
+        /* === التذييل (Footer) === */
+        .footer { background-color: #212529; color: #adb5bd; padding: 40px 15px; }
+        .footer h5 { color: #fff; font-weight: 700; margin-bottom: 1.5rem;}
+        .footer a { color: #adb5bd; text-decoration: none; transition: color 0.2s ease; }
+        .footer a:hover { color: #fff; }
+        .footer .social-icons a { display: inline-flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 50%; background-color: #343a40; color: #fff; margin: 0 5px; font-size: 1.1rem; }
+        .footer .social-icons a:hover { background-color: #0d6efd; }
+        .footer .footer-bottom { border-top: 1px solid #343a40; padding-top: 20px; margin-top: 20px; }
     </style>
 </head>
 
@@ -132,9 +145,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#hero">الرئيسية</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#filter-stages">المنتجات</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#filter-stages">المنتجات</a></li>
                     <li class="nav-item"><a class="nav-link" href="#cta">تواصل معنا</a></li>
                 </ul>
             </div>
@@ -162,7 +173,7 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 <img src="assets/pps-sediment.jpg" alt="PPS Sediment Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">PPS Sediment Filter (Turka)</h5>
+                                <h5 class="product-list-name mb-0">فلتر الرواسب (المرحلة الأولى)</h5>
                             </div>
                             <span class="product-list-price"></span>
                         </li>
@@ -170,7 +181,7 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 <img src="assets/gac-granule-carbon.jpg" alt="GAC Granule Carbon Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">GAC Granule Carbon Filter (Turka)</h5>
+                                <h5 class="product-list-name mb-0">فلتر الكربون الحبيبي (المرحلة الثانية)</h5>
                             </div>
                             <span class="product-list-price"></span>
                         </li>
@@ -178,7 +189,7 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 <img src="assets/cto-block-carbon.jpg" alt="CTO Block Carbon Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">CTO Block Carbon Filter (Turka)</h5>
+                                <h5 class="product-list-name mb-0">فلتر الكربون المصمت (المرحلة الثالثة)</h5>
                             </div>
                             <span class="product-list-price"></span>
                         </li>
@@ -186,7 +197,7 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 <img src="assets/membrane-filter.jpg" alt="Membrane Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">Membrane Filter 80 GPD (Right Water)</h5>
+                                <h5 class="product-list-name mb-0">الممبرين (المرحلة الرابعة)</h5>
                             </div>
                             <span class="product-list-price"></span>
                         </li>
@@ -194,7 +205,7 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 <img src="assets/post-carbon.jpg" alt="Post Carbon Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">Post Carbon Filter (Turka)</h5>
+                                <h5 class="product-list-name mb-0">فلتر البوست كربون (المرحلة الخامسة)</h5>
                             </div>
                             <span class="product-list-price"></span>
                         </li>
@@ -202,7 +213,7 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 <img src="assets/mineral-filter.jpg" alt="Mineral Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">Mineral Filter (Turka)</h5>
+                                <h5 class="product-list-name mb-0">فلتر المعادن (الكالسيت)</h5>
                             </div>
                             <span class="product-list-price"></span>
                         </li>
@@ -210,7 +221,7 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 <img src="assets/ph-stabilizer-green.jpg" alt="Stabilizer Ph Filter" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">Stabilizer Ph Filter (Green)</h5>
+                                <h5 class="product-list-name mb-0">فلتر قلونة المياه (pH)</h5>
                             </div>
                             <span class="product-list-price"></span>
                         </li>
@@ -218,7 +229,23 @@
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center">
                                 <img src="assets/mineral-filter-purple.jpg" alt="Mineral Filter Purple" class="product-list-img me-4">
-                                <h5 class="product-list-name mb-0">Mineral Filter (Purple)</h5>
+                                <h5 class="product-list-name mb-0">فلتر المعادن (بنفسجي)</h5>
+                            </div>
+                            <span class="product-list-price"></span>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/gold-mineral-filter.jpg" alt="Gold Mineral Filter" class="product-list-img me-4">
+                                <h5 class="product-list-name mb-0">الفلتر الذهبي (Gold Mineral)</h5>
+                            </div>
+                            <span class="product-list-price"></span>
+                        </li>
+                        
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/post-carbon-gold-ring.jpg" alt="Post Carbon with Gold Ring" class="product-list-img me-4">
+                                <h5 class="product-list-name mb-0">بوست كربون (حلقة ذهبية)</h5>
                             </div>
                             <span class="product-list-price"></span>
                         </li>
@@ -229,7 +256,7 @@
         </section>
     </main>
 
-    <!-- Call to Action & Footer (نفس التذييل الاحترافي السابق) -->
+    <!-- Call to Action Section -->
     <section class="cta-section" id="cta">
         <div class="container">
              <h2>هل أنت مستعد للحصول على أفضل حلول المياه؟</h2>
@@ -237,8 +264,45 @@
              <a href="tel:+201012345678" class="btn btn-light mt-3"><i class="fas fa-phone me-2"></i>اتصل بنا الآن</a>
         </div>
     </section>
-    <footer class="footer bg-dark text-white">
-        <!-- ... نفس كود التذييل من الإجابات السابقة ... -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5>Right Water</h5>
+                    <p>شركة رائدة في مجال تكنولوجيا معالجة المياه، نقدم منتجات عالية الجودة وحلول مبتكرة لضمان مياه نقية وصحية للجميع.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#hero">الرئيسية</a></li>
+                        <li><a href="#filter-stages">المنتجات</a></li>
+                        <li><a href="#cta">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5>معلومات الاتصال</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> العنوان، المدينة، مصر</li>
+                        <li><i class="fas fa-phone me-2"></i> <a href="tel:+201012345678">010-1234-5678</a></li>
+                        <li><i class="fas fa-envelope me-2"></i> <a href="mailto:info@rightwater.com">info@rightwater.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5>تابعنا</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center footer-bottom">
+                <p class="mb-0">© 2024 Right Water. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
     </footer>
     
     <!-- Bootstrap & JavaScript -->
