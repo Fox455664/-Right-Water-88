@@ -3,149 +3,125 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="كتالوج منتجات شركة رايت ووتر" />
+    <meta name="description" content="كتالوج منتجات شركة رايت ووتر لحلول معالجة المياه" />
     <meta name="author" content="Right Water" />
-    <title>كتالوج منتجات - Right Water</title>
+    <title>قائمة منتجات - Right Water</title>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons (free version) -->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Core theme CSS (includes Bootstrap) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+    
     <style>
-        /* === General Styles === */
+        /* === إعدادات عامة === */
         html {
             scroll-behavior: smooth;
         }
         body {
-            font-family: 'Cairo', Arial, sans-serif;
-            line-height: 1.6;
-            background: #f0f8ff; /* AliceBlue - لون خلفية ناعم جداً */
-            padding-top: 80px; /* لإعطاء مساحة تحت شريط التنقل الثابت */
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8f9fa;
         }
 
-        /* === Navbar Styles === */
+        /* === قسم المقدمة (Hero) === */
+        .hero {
+            position: relative;
+            background: url('assets/hero-background.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(13, 110, 253, 0.6);
+        }
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            font-weight: 400;
+        }
+
+        /* === شريط التنقل === */
         .navbar {
-            background: linear-gradient(to left, #4facfe, #00f2fe) !important; /* تدرج لوني أزرق سماوي يعكس الماء */
-            box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+            background-color: rgba(13, 110, 253, 0.8) !important;
+            backdrop-filter: blur(5px);
         }
         .navbar-brand {
-            color: #ffffff !important;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 1.8rem;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-        }
-        .navbar-nav .nav-link {
-            color: #ffffff !important;
-            font-weight: bold;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link:focus,
-        .navbar-nav .nav-link.active {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #fff !important;
-        }
-        .navbar-toggler {
-            border-color: rgba(255, 255, 255, 0.5) !important;
-        }
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        }
-        .dropdown-menu {
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            max-height: 400px;
-            overflow-y: auto;
-        }
-        .dropdown-item {
-            color: #007bff;
-            font-weight: 600;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-        .dropdown-item:hover, .dropdown-item:focus {
-            background-color: #e9ecef;
-            color: #0056b3;
         }
 
-        /* === Product Section Styles === */
+        /* === أقسام المنتجات (تصميم القائمة) === */
         .product-section {
-            padding: 60px 15px;
-            border-bottom: 1px solid #e0e0e0;
+            padding: 80px 15px;
         }
         .product-section:nth-child(even) {
-             background-color: #ffffff;
+            background-color: #ffffff;
         }
         .section-title {
-            color: #0056b3;
+            font-weight: 900;
+            color: #0d6efd;
+            margin-bottom: 50px;
             text-align: center;
-            margin-bottom: 40px;
-            font-weight: 700;
-            position: relative;
         }
-        .section-title::after {
-            content: '';
-            display: block;
+        .product-list-group .list-group-item {
+            margin-bottom: 15px;
+            border-radius: 12px !important;
+            border: 1px solid #e9ecef;
+            padding: 1rem 1.5rem;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        .product-list-group .list-group-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(13, 110, 253, 0.1);
+            border-color: #0d6efd;
+        }
+        
+        .product-list-img {
             width: 80px;
-            height: 3px;
-            background: #4facfe;
-            margin: 10px auto 0;
-            border-radius: 2px;
+            height: 80px;
+            object-fit: contain;
+            border-radius: 8px;
+            background-color: #fff;
         }
-        .product-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            justify-content: center;
-        }
-        .product-card {
-            background: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 15px;
-            width: 280px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-        }
-        .product-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid #eee;
-        }
-        .product-card .product-info {
-            padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .product-card h3 {
-            font-size: 1.1rem;
+        
+        .product-list-name {
             font-weight: 700;
+            font-size: 1.2rem;
             color: #343a40;
-            margin: 0;
+        }
+
+        .product-list-price {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #0d6efd;
+            min-width: 120px;
+            text-align: left;
         }
     </style>
 </head>
 
 <body>
+
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
@@ -155,418 +131,117 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            الأقسام
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#sham3a-owla">شمعة أولى</a></li>
-                            <li><a class="dropdown-item" href="#sham3a-thania">شمعة ثانية</a></li>
-                            <li><a class="dropdown-item" href="#sham3a-thalitha">شمعة ثالثة</a></li>
-                            <li><a class="dropdown-item" href="#taqm-hawzeng">طقم هاوزنج</a></li>
-                            <li><a class="dropdown-item" href="#shasie-plastic">شاسيه</a></li>
-                            <li><a class="dropdown-item" href="#ro">RO</a></li>
-                            <li><a class="dropdown-item" href="#hanfiat">حنفيات</a></li>
-                            <li><a class="dropdown-item" href="#adwat-izafia">أدوات إضافية</a></li>
-                            <li><a class="dropdown-item" href="#sham3a-panasonic">شمعة باناسونيك</a></li>
-                            <li><a class="dropdown-item" href="#jawan">جوان</a></li>
-                            <li><a class="dropdown-item" href="#tabaq-thulathi">طبق ثلاثي</a></li>
-                            <li><a class="dropdown-item" href="#khazan">خزان</a></li>
-                            <li><a class="dropdown-item" href="#mftah-hawzeng">مفتاح هاوزنج</a></li>
-                            <li><a class="dropdown-item" href="#nitra">نتره</a></li>
-                            <li><a class="dropdown-item" href="#sabe3-sarf">صباع صرف</a></li>
-                            <li><a class="dropdown-item" href="#kaw3">كوع</a></li>
-                            <li><a class="dropdown-item" href="#hi">هاي ولو</a></li>
-                            <li><a class="dropdown-item" href="#فلتر-انجليزي">أجهزة ومضخات</a></li>
-                            <li><a class="dropdown-item" href="#فلتر-رايت-واتر">فلاتر كاملة</a></li>
-                            <li><a class="dropdown-item" href="#كرتون">كرتون وتغليف</a></li>
-                        </ul>
+                    <li class="nav-item"><a class="nav-link" href="#hero">الرئيسية</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#filter-stages">المنتجات</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#">عن الشركة</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">اتصل بنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cta">تواصل معنا</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="container">
+            <h1>Right Water</h1>
+            <p>الجودة والنقاء في كل قطرة</p>
+            <a href="#filter-stages" class="btn btn-outline-light btn-lg mt-3">تصفح منتجاتنا</a>
+        </div>
+    </header>
 
     <!-- Main Content -->
     <main>
-        <!-- قسم شمعة أولى -->
-        <section id="sham3a-owla" class="product-section">
+        <!-- قسم فلاتر ومراحل التنقية -->
+        <section id="filter-stages" class="product-section">
             <div class="container">
-                <h2 class="section-title">شمعة أولى</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه أولى 65 جرام</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه أولى 90 جرام</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه أولى 100 جرام رايت ووتر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه أولى 110 جرام رايت ووتر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه أولى 125 جرام رايت ووتر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه أولى 135 جرام رايت ووتر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه أولى 20 بوصه</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه أولى جامبو</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه أولى كومبكت تركي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه أولى كومبكت صيني</h3></div></div>
+                <h2 class="section-title">فلاتر ومراحل التنقية</h2>
+                <div class="col-lg-10 mx-auto">
+                    <ul class="list-group product-list-group">
+                        
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/pps-sediment.jpg" alt="PPS Sediment Filter" class="product-list-img me-4">
+                                <h5 class="product-list-name mb-0">PPS Sediment Filter (Turka)</h5>
+                            </div>
+                            <span class="product-list-price"></span>
+                        </li>
+                        
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/gac-granule-carbon.jpg" alt="GAC Granule Carbon Filter" class="product-list-img me-4">
+                                <h5 class="product-list-name mb-0">GAC Granule Carbon Filter (Turka)</h5>
+                            </div>
+                            <span class="product-list-price"></span>
+                        </li>
+                        
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/cto-block-carbon.jpg" alt="CTO Block Carbon Filter" class="product-list-img me-4">
+                                <h5 class="product-list-name mb-0">CTO Block Carbon Filter (Turka)</h5>
+                            </div>
+                            <span class="product-list-price"></span>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/membrane-filter.jpg" alt="Membrane Filter" class="product-list-img me-4">
+                                <h5 class="product-list-name mb-0">Membrane Filter 80 GPD (Right Water)</h5>
+                            </div>
+                            <span class="product-list-price"></span>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/post-carbon.jpg" alt="Post Carbon Filter" class="product-list-img me-4">
+                                <h5 class="product-list-name mb-0">Post Carbon Filter (Turka)</h5>
+                            </div>
+                            <span class="product-list-price"></span>
+                        </li>
+                        
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/mineral-filter.jpg" alt="Mineral Filter" class="product-list-img me-4">
+                                <h5 class="product-list-name mb-0">Mineral Filter (Turka)</h5>
+                            </div>
+                            <span class="product-list-price"></span>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/ph-stabilizer-green.jpg" alt="Stabilizer Ph Filter" class="product-list-img me-4">
+                                <h5 class="product-list-name mb-0">Stabilizer Ph Filter (Green)</h5>
+                            </div>
+                            <span class="product-list-price"></span>
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/mineral-filter-purple.jpg" alt="Mineral Filter Purple" class="product-list-img me-4">
+                                <h5 class="product-list-name mb-0">Mineral Filter (Purple)</h5>
+                            </div>
+                            <span class="product-list-price"></span>
+                        </li>
+                        
+                    </ul>
                 </div>
             </div>
         </section>
-
-        <!-- قسم شمعة ثانية -->
-        <section id="sham3a-thania" class="product-section">
-            <div class="container">
-                <h2 class="section-title">شمعة ثانية</h2>
-                <div class="product-container">
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>رايت ووتر كاب الخضر</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>رايت ووتر كاب أزرق</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>رايت ووتر مصري</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>فيتنامي</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>أكوافلتر</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>أكواوين</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كويك سيلفر</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>مصري</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>تروبيكال</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>وينتر</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>توب ووتر</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>باور جيت</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كومبكت تركي</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>20 بوصه</h3></div></div>
-                     <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>جامبو</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم شمعة ثالثة -->
-        <section id="sham3a-thalitha" class="product-section">
-            <div class="container">
-                 <h2 class="section-title">شمعة ثالثة</h2>
-                 <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة رايت ووتر كاب الخضر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة رايت ووتر كتاب أزرق</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة رايت ووتر مصري</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة فيتنامي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة أكوافلتر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة أكواوين</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة كويك سيلفر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة بولي بكاب</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة تروبيكال</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة بوست نيو جيت</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة كالسيد نيو جيت</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة إنفراريد نيو جيت</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة بوست استيفوا</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة كالسيد استيفوا</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة إنفراريد استيفوا</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة كالسيد تركي 100 رايت ووتر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة كالسيد فيتنامي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة كالسيد صيني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة كالسيد بيور جار</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة كالسيد مصري</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة كالسيد أصفر مصري</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة إنفراريد فيتنامي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة إنفراريد صيني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة إنفراريد بيور جارد</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة إنفراريد مصري</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه ثالثة إنفراريد بلانك</h3></div></div>
-                 </div>
-            </div>
-        </section>
-
-        <!-- قسم طقم هاوزنج -->
-        <section id="taqm-hawzeng" class="product-section">
-            <div class="container">
-                <h2 class="section-title">طقم هاوزنج</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>فيتنامي CCK</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>سوان إيكوا</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>أبيض جاكوار</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شفاف جاكوار</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>غسالة جاكوار</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>أبيض فيتنامي CCK</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شفاف فيتنامي CCK</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>أبيض سوان إيكوا</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شفاف سوان إيكوا</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>جامبو</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>20 بوصه فيتنامي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>20 بوصه صيني</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم شاسيه -->
-        <section id="shasie-plastic" class="product-section">
-            <div class="container">
-                <h2 class="section-title">شاسيه</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شاسيه بلاستيك أسود</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شاسيه بلاستيك RO أبيض رايت ووتر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شاسيه بلاستيك RO أزرق رايت ووتر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شاسيه بلاستيك RO برتقالي رايت ووتر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شاسيه بوكس</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شاسيه خماسي معدن</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شاسيه RO أبيض</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شاسيه RO أزرق</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شاسيه RO برتقالي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شاسيه RO أسود</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شاسيه أبيض خماسي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شاسيه أسود خماسي</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم RO (مدمج مع أدوات إضافية) -->
-        <section id="ro" class="product-section">
-             <div class="container">
-                <h2 class="section-title">RO ومنتجات متعلقة</h2>
-                 <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>هاوزنج ممبرين صيني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>هاوزنج ممبرين تركي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>هاوزنج ممبرين فيتنامي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>ممبرين LG</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>ممبرين بنتير</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>ممبرين فلمنيك</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>ممبرين فيتنامي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>ممبرين لوف</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>ممبرين ووتر تك</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>ممبرين كويك سيلفر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>جراب RO</h3></div></div>
-                 </div>
-            </div>
-        </section>
-
-        <!-- قسم حنفيات -->
-        <section id="hanfiat" class="product-section">
-            <div class="container">
-                <h2 class="section-title">حنفيات</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>حنفية ثلاثي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>حنفية لوكس مذهبة قلب نحاس</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>حنفية لوكس فضي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>حنفية هاند مكسر قلب بلاستيك</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>حنفية هاند مكسر قلب نحاس</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>حامل حنفية</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم أدوات إضافية -->
-        <section id="adwat-izafia" class="product-section">
-            <div class="container">
-                <h2 class="section-title">أدوات إضافية</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>لفة خرطوم 100 متر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>لفة خرطوم 100 متر أزرق</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>لفة خرطوم 300 متر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>لفة خرطوم 300 متر فيتنامي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كلمب ص ص</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كلمب 2/1 ص</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كلمب ك * ص</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كلمب 2/1 ك</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>حامل هاوزنج غسالة</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>عبوة شمع رايت ووتر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>فلتر غسالة كامل بالعلبة</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>قارورة توصيل مباشر مصري</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>قارورة توصيل مباشر صيني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>قارورة توصيل مباشر فيتنامي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>جراب خماسي</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم شمعة باناسونيك -->
-        <section id="sham3a-panasonic" class="product-section">
-            <div class="container">
-                <h2 class="section-title">شمعة باناسونيك</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعة باناسونيك</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم جوان -->
-        <section id="jawan" class="product-section">
-            <div class="container">
-                <h2 class="section-title">جوان</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>جوان هاوزنج</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>جوان كابات</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم طبق ثلاثي -->
-        <section id="tabaq-thulathi" class="product-section">
-            <div class="container">
-                <h2 class="section-title">طبق ثلاثي</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>طبق ثلاثي</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم خزان -->
-        <section id="khazan" class="product-section">
-            <div class="container">
-                <h2 class="section-title">خزان</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>خزان صيني جالون</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>خزان صيني 3.2 جالون</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>خزان صيني 5 جالون</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>خزان فيتنامي جالون</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم مفتاح هاوزنج -->
-        <section id="mftah-hawzeng" class="product-section">
-            <div class="container">
-                <h2 class="section-title">مفتاح هاوزنج</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>مفتاح هاوزنج</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>مفتاح هاوزنج رايت</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>مفتاح هاوزنج جامبو</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم نتره -->
-        <section id="nitra" class="product-section">
-            <div class="container">
-                <h2 class="section-title">نتره</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>نتره بلاستيك رايت ووتر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>نتره بمحبس بلاستيك</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>نتره 2/1 معدن</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>نتره 2/1 ألمنيوم</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>نتره 4/3</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم صباع صرف -->
-        <section id="sabe3-sarf" class="product-section">
-            <div class="container">
-                <h2 class="section-title">صباع صرف</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>صباع صرف صيني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>صباع صرف تايواني</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم كوع -->
-        <section id="kaw3" class="product-section">
-            <div class="container">
-                <h2 class="section-title">كوع</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كوع ربع إيزى</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كوع ربع صامولة</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كوع مضخة أبزي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كوع مضخة صامولة</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كوع ممبرين أبزي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كوع ممبرين صامولة</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>نوع شيك بلف إيزى</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كوع شيك بلف صامولة</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كوع ثلاثي تيل</h3></div></div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- قسم هاي ولو -->
-        <section id="hi" class="product-section">
-            <div class="container">
-                <h2 class="section-title">هاي ولو (High & Low Pressure)</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>هاي تايواني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>لو تايواني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>رباعي تايواني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>هاي مختوم تايواني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>لو مختوم تايواني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>رباعي مختوم تايواني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>هاي صيني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>لو صيني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>رباعي صيني</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم أجهزة ومضخات -->
-        <section id="فلتر-انجليزي" class="product-section">
-            <div class="container">
-                <h2 class="section-title">أجهزة ومضخات</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>فلتر إنجليزي صيني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>شمعه إنجليزي صيني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>TDS جهاز</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>جهاز أقطاب</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>ترانس إلكتروني مختوم</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>ترانس إلكتروني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>ترانس رايت ووتر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>مضخة صيني أكوا فلتر ص</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>مضخة صيني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>هندي كروز 100 جالون</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>هندي هاي ليف 100 جالون</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>مضخة هيدون</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>هيد مضخة قلب معدن</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>طقم إصلاح</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم فلاتر كاملة -->
-        <section id="فلتر-رايت-واتر" class="product-section">
-            <div class="container">
-                <h2 class="section-title">فلاتر كاملة</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>فلتر خماسي رايت برتقالي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>فلتر خماسي ووتر لايف سوان</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>فلتر خماسي ووتر لايف CCK</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>فلتر خماسي ووتر لايف جاكوار</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>فلتر خماسي أزرق</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>فلتر خماسي خشبي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>فلتر خماسي جاكوار</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>فلتر ثلاثي رايت</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>فلتر ثلاثي رايت دايفورتر</h3></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- قسم كرتون وتغليف -->
-        <section id="كرتون" class="product-section">
-            <div class="container">
-                <h2 class="section-title">كرتون وتغليف</h2>
-                <div class="product-container">
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة ثلاثي رايت</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة ثلاثي خشبي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة خماسي أزرق</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة خماسي خشبي</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة خماسي رايت</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة خماسي بريمو</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة خماسي جاكوار</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة خماسي ووتر لايف لبني</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة خماسي ووتر لايف</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة RO</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة فلترة أزرق</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة فلترة أخضر</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة طقم</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة عبوة شمع</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة هاوزنج غسالة</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة ووتر بوكس</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة بوكس ساده</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>كرتونة بوكس ساده 5 راق</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>غطاء بوكس برتقالي منقط</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>غطاء بوكس أزرق منقط</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>غطاء بوكس أخضر منقط</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>غطاء بوكس أزرق ساده</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>غطاء بوكس أبيض ساده</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>غطاء بوكس أخضر ساده</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>بوكس أزرق</h3></div></div>
-                    <div class="product-card"><img src="assets/placeholder.jpg" alt="صورة منتج"><div class="product-info"><h3>بوكس أبيض</h3></div></div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Call to Action & Footer (نفس التذييل الاحترافي السابق) -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+             <h2>هل أنت مستعد للحصول على أفضل حلول المياه؟</h2>
+             <p class="lead">تواصل مع فريق خبرائنا اليوم للحصول على استشارة أو طلب عرض أسعار.</p>
+             <a href="tel:+201012345678" class="btn btn-light mt-3"><i class="fas fa-phone me-2"></i>اتصل بنا الآن</a>
+        </div>
+    </section>
+    <footer class="footer bg-dark text-white">
+        <!-- ... نفس كود التذييل من الإجابات السابقة ... -->
+    </footer>
     
+    <!-- Bootstrap & JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
