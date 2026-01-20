@@ -3,331 +3,287 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="كتالوج منتجات شركة رايت ووتر لحلول معالجة المياه" />
-    <meta name="author" content="Right Water" />
-    <title>كتالوج منتجات - Right Water</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons -->
+    
+    <!-- === SEO Optimization (تحسين محركات البحث) === -->
+    <title>البدروم كافيه | أفضل كافيه وبلاي ستيشن في المنصورة</title>
+    <meta name="description" content="منيو البدروم كافيه - استمتع بأفضل المشروبات الباردة والساخنة، الحلويات، السناكس، وأحدث ألعاب البلاي ستيشن في المنصورة. جودة وفخامة في مكان واحد." />
+    <meta name="keywords" content="البدروم كافيه, كافيه المنصورة, بلاي ستيشن المنصورة, منيو كافيه, مشروبات باردة, مشروبات ساخنة, شيشة, كافيهات مصر" />
+    <meta name="author" content="El-Badroom Cafe" />
+    <link rel="canonical" href="https://your-domain.com" /> <!-- حط رابط موقعك هنا لاحقاً -->
+
+    <!-- === وسائل التواصل الاجتماعي (Open Graph) === -->
+    <meta property="og:title" content="البدروم كافيه | El-Badroom Cafe" />
+    <meta property="og:description" content="تصفح منيو البدروم كافيه الآن. مشروبات، حلويات، وأجواء رائعة." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=600&auto=format&fit=crop" />
+    <meta property="og:url" content="https://your-domain.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- === الخطوط والأيقونات === -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
     
     <style>
-        /* === إعدادات عامة === */
-        html {
-            scroll-behavior: smooth;
+        :root {
+            --gold: #d4af37;
+            --main-dark: #0f0f0f;
+            --accent: #e67e22;
+            --bg: #f8f9fa;
         }
+
         body {
             font-family: 'Cairo', sans-serif;
-            background-color: #f8f9fa;
+            background-color: var(--bg);
+            color: #333;
+            scroll-behavior: smooth;
         }
 
-        /* === قسم المقدمة (Hero) === */
-        .hero {
-            position: relative;
-            background: url('assets/hero-background.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 120px 0;
-            text-align: center;
+        /* --- الهيدر الفخم --- */
+        header.header-cafe {
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover; background-position: center;
+            padding: 100px 0; text-align: center; color: white;
+            border-radius: 0 0 50px 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(13, 110, 253, 0.6);
+        .header-cafe h1 { font-weight: 900; font-size: 3.5rem; color: var(--gold); margin-bottom: 10px; }
+
+        /* --- شريط التنقل --- */
+        nav.category-nav {
+            position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px); padding: 15px 0; display: flex;
+            overflow-x: auto; gap: 10px; border-bottom: 3px solid var(--gold);
         }
-        .hero .container {
-            position: relative;
-            z-index: 2;
+        .category-nav::-webkit-scrollbar { display: none; }
+        .nav-link-custom {
+            padding: 10px 22px; border-radius: 50px; background: var(--main-dark);
+            color: white; text-decoration: none; font-weight: 700; white-space: nowrap; transition: 0.3s;
         }
-        .hero h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        .nav-link-custom:hover { background: var(--accent); transform: translateY(-3px); color: white; }
+
+        /* --- بطاقات المنيو --- */
+        .menu-item {
+            background: white; border-radius: 20px; padding: 22px;
+            margin-bottom: 18px; display: flex; justify-content: space-between;
+            align-items: center; box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            border-right: 6px solid var(--gold);
+            transition: 0.3s;
         }
-        .hero p {
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            font-weight: 400;
+        .menu-item:hover { transform: scale(1.02); }
+        .item-info h2 { font-weight: 800; margin: 0; font-size: 1.25rem; color: #111; }
+        .price-tag { color: var(--accent); font-weight: 900; font-size: 1.4rem; }
+
+        /* --- لوحة تحكم المدير --- */
+        #admin-panel {
+            display: none; background: #fff; border: 4px solid var(--accent);
+            border-radius: 35px; padding: 35px; margin: 25px 0;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
         }
 
-        /* === شريط التنقل === */
-        .navbar {
-            background-color: rgba(13, 110, 253, 0.8) !important;
-            backdrop-filter: blur(5px);
+        /* --- قسم التواصل --- */
+        .contact-section {
+            background: #fff; border-radius: 35px; padding: 40px;
+            margin-top: 60px; text-align: center; box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
         }
-        .navbar-brand {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
+        .social-container { display: flex; justify-content: center; gap: 25px; margin-top: 25px; }
+        .social-btn {
+            width: 70px; height: 70px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 2rem; color: white; transition: 0.3s; text-decoration: none;
         }
+        .social-btn:hover { transform: translateY(-5px); color: white; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .bg-whatsapp { background-color: #25d366; }
+        .bg-facebook { background-color: #1877f2; }
+        .bg-phone { background-color: #222; }
+        .phone-text { display: block; margin-top: 15px; font-weight: 900; font-size: 1.4rem; color: var(--main-dark); }
 
-        /* === أقسام المنتجات (تصميم البطاقات) === */
-        .product-section {
-            padding: 80px 15px;
-        }
-        .product-section:nth-child(even) {
-            background-color: #ffffff;
-        }
-        .section-title {
-            font-weight: 900;
-            color: #0d6efd;
-            margin-bottom: 50px;
-            text-align: center;
-        }
-        .product-card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden;
-            background-color: #fff;
-            width: 280px;
-            margin: 15px;
-        }
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(13, 110, 253, 0.15);
-        }
-        .product-card-img {
-            height: 250px;
-            width: 100%;
-            object-fit: cover;
-        }
-        .product-card .card-body {
-            padding: 1.5rem;
-            text-align: center;
-        }
-        .product-card .card-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #343a40;
-            min-height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .product-card .price {
-            font-size: 1.3rem;
-            font-weight: 900;
-            color: #0d6efd;
-            margin-top: 10px;
-        }
-
-        /* === قسم الدعوة للتواصل (CTA) === */
-        .cta-section { background: linear-gradient(90deg, #0d6efd, #0dcaf0); color: white; padding: 60px 15px; text-align: center; }
-        .cta-section h2 { font-weight: 700; margin-bottom: 1rem; }
-
-        /* === التذييل (Footer) === */
-        .footer { background-color: #212529; color: #adb5bd; padding: 40px 15px; }
-        .footer h5 { color: #fff; font-weight: 700; margin-bottom: 1.5rem;}
-        .footer a { color: #adb5bd; text-decoration: none; transition: color 0.2s ease; }
-        .footer a:hover { color: #fff; }
-        .footer .social-icons a { display: inline-flex; justify-content: center; align-items: center; width: 40px; height: 40px; border-radius: 50%; background-color: #343a40; color: #fff; margin: 0 5px; font-size: 1.1rem; }
-        .footer .social-icons a:hover { background-color: #0d6efd; }
-        .footer .footer-bottom { border-top: 1px solid #343a40; padding-top: 20px; margin-top: 20px; }
+        #loader { position: fixed; top:0; left:0; width:100%; height:100%; background:white; z-index:10000; display:flex; justify-content:center; align-items:center; display:none; }
     </style>
 </head>
 
 <body>
 
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div id="loader"><div class="spinner-border text-warning" style="width: 3rem; height: 3rem;"></div></div>
+
+    <header class="header-cafe">
         <div class="container">
-            <a class="navbar-brand" href="#">Right Water</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#hero">الرئيسية</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#products">المنتجات</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#cta">تواصل معنا</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Hero Section -->
-    <header class="hero" id="hero">
-        <div class="container">
-            <h1>Right Water</h1>
-            <p>الجودة والنقاء في كل قطرة</p>
-            <a href="#products" class="btn btn-outline-light btn-lg mt-3">تصفح منتجاتنا</a>
+            <h1>البدروم كافيه</h1>
+            <p class="lead text-white-50">الجودة، الفخامة، والمتعة في مكان واحد</p>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- قسم المنتجات -->
-        <section id="products" class="product-section">
-            <div class="container">
-                <h2 class="section-title">قسم الشمع التركي</h2>
-                <div class="d-flex flex-wrap justify-content-center">
-                    
-                    <!-- بطاقة المنتج 1 -->
-                    <div class="card product-card">
-                        <img src="assets/pps-sediment.jpg" class="product-card-img" alt= الرواسب">
-                        <div class="card-body">
-                            <h5 class="card-title">شمعه الرواسب (المرحلة الأولى)</h5>
-                            <div class="price"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- بطاقة المنتج 2 -->
-                    <div class="card product-card">
-                        <img src="assets/gac-granule-carbon.jpg" class="product-card-img" alt="شمعه الكربون الحبيبي">
-                        <div class="card-body">
-                            <h5 class="card-title">شمعه الكربون الحبيبي (المرحلة الثانية)</h5>
-                            <div class="price"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- بطاقة المنتج 3 -->
-                    <div class="card product-card">
-                        <img src="assets/cto-block-carbon.jpg" class="product-card-img" alt="شمعه الكربون المصمت">
-                        <div class="card-body">
-                            <h5 class="card-title">شمعه الكربون المصمت (المرحلة الثالثة)</h5>
-                            <div class="price"></div>
-                        </div>
-                    </div>
+    <nav class="category-nav justify-content-center" id="nav-bar"></nav>
 
-                    <!-- بطاقة المنتج 4 -->
-                    <div class="card product-card">
-                        <img src="assets/membrane-filter.jpg" class="product-card-img" alt="الممبرين">
-                        <div class="card-body">
-                            <h5 class="card-title">الممبرين (المرحلة الرابعة)</h5>
-                            <div class="price"></div>
-                        </div>
-                    </div>
-
-                    <!-- بطاقة المنتج 5 -->
-                    <div class="card product-card">
-                        <img src="assets/post-carbon1.jpg" class="product-card-img" alt="االشمع التركي">
-                        <div class="card-body">
-                            <h5 class="card-title">الشمع التركي</h5>
-                            <div class="price"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- بطاقة المنتج 6 -->
-                    <div class="card product-card">
-                        <img src="assets/mineral-filter.jpg" class="product-card-img" alt="كالسيد شمعه">
-                        <div class="card-body">
-                            <h5 class="card-title">شمعه كالسيد </h5>
-                            <div class="price"></div>
-                        </div>
-                    </div>
-                    
-                   
-
-                    <!-- بطاقة المنتج 8 -->
-                    <div class="card product-card">
-                        <img src="assets/ph-stabilizer-green.jpg" class="product-card-img" alt="شمعه قلونة المياه">
-                        <div class="card-body">
-                            <h5 class="card-title">شمعه قلونة المياه (pH)</h5>
-                            <div class="price"></div>
-                        </div>
-                    </div>
-
-                    <!-- بطاقة المنتج 9 -->
-                    <div class="card product-card">
-                        <img src="assets/mineral-filter-purple.jpg" class="product-card-img" alt="شمعه المعادن بنفسجي ">
-                        <div class="card-body">
-                            <h5 class="card-title">شمعه المعادن (بنفسجي)</h5>
-                            <div class="price"></div>
-                        </div>
-                    </div>
-
-                    <!-- بطاقة المنتج 10 -->
-                    <div class="card product-card">
-                        <img src="assets/gold-mineral-filter.jpg" class="product-card-img" alt="الشمعه الذهبي">
-                        <div class="card-body">
-                            <h5 class="card-title">الشمعه الذهبي (Gold Mineral)</h5>
-                            <div class="price"></div>
-                        </div>
-                    </div>
-
-                  <!-- بطاقة المنتج 11 -->
-                    <div class="card product-card">
-                        <img src="assets/mineral-filter11.jpg" class="product-card-img" alt="mineral-filter شمعه ">
-                        <div class="card-body">
-                            <h5 class="card-title">mineral-filter شمعه</h5>
-                            <div class="price"></div>
-                        </div>
-                    </div>
-                    
+    <main class="container mt-4">
+        
+        <!-- لوحة تحكم المدير (تظهر عبر ?manage=true) -->
+        <section id="admin-panel">
+            <h3 class="fw-bold mb-4"><i class="fas fa-magic text-warning"></i> إدارة المنيو</h3>
+            <div class="row g-3">
+                <div class="col-md-5"><input type="text" id="itemName" class="form-control form-control-lg" placeholder="اسم الصنف"></div>
+                <div class="col-md-3"><input type="number" id="itemPrice" class="form-control form-control-lg" placeholder="السعر"></div>
+                <div class="col-md-4">
+                    <select id="itemCat" class="form-select form-select-lg">
+                        <option value="cold">مشروبات باردة بأنواعها</option>
+                        <option value="hot">مشروبات ساخنة بأنواعها</option>
+                        <option value="sweets">حلويات</option>
+                        <option value="snacks">سناكس</option>
+                        <option value="shisha">شيشه</option>
+                        <option value="ps">بلاى ستيشن</option>
+                    </select>
+                </div>
+                <div class="col-12 mt-4">
+                    <button class="btn btn-warning w-100 fw-bold py-3 fs-5" onclick="addNewItem()">تحديث المنيو فوراً</button>
+                    <button class="btn btn-link text-muted w-100 mt-2" onclick="exitAdmin()">خروج من الإدارة</button>
                 </div>
             </div>
         </section>
+
+        <!-- محتوى المنيو -->
+        <article id="menu-content"></article>
+
+        <!-- العروض -->
+        <section>
+            <h2 class="fw-black mt-5 mb-4" style="border-right: 5px solid var(--accent); padding-right: 15px;">عروض خاصة</h2>
+            <div style="background: #222; color: #fff; border-radius: 25px; padding: 60px 20px; text-align: center; position: relative;">
+                <span style="font-size: 3rem; opacity: 0.1; font-weight: 900;">OFFERS</span>
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--accent); padding: 10px 30px; border-radius: 10px; font-weight: 900;">قريباً .. SOON</div>
+            </div>
+        </section>
+
+        <!-- التواصل -->
+        <section class="contact-section">
+            <h2 class="fw-bold mb-4">اطلب الآن أو شرفنا بالزيارة</h2>
+            <div class="social-container">
+                <a href="tel:01117767717" class="social-btn bg-phone shadow"><i class="fas fa-phone-alt"></i></a>
+                <a href="https://wa.me/201117767717" target="_blank" class="social-btn bg-whatsapp shadow"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank" class="social-btn bg-facebook shadow"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <a href="tel:01117767717" class="phone-text text-decoration-none">0111-7767-717</a>
+        </section>
+
     </main>
 
-    <!-- Call to Action Section -->
-    <section class="cta-section" id="cta">
-        <div class="container">
-             <h2>هل أنت مستعد للحصول على أفضل حلول المياه؟</h2>
-             <p class="lead">تواصل مع فريق خبرائنا اليوم للحصول على استشارة أو طلب عرض أسعار.</p>
-             <a href="tel:+201012345678" class="btn btn-light mt-3"><i class="fas fa-phone me-2"></i>اتصل بنا الآن</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                    <h5>Right Water</h5>
-                    <p>شركة رائدة في مجال تكنولوجيا معالجة المياه، نقدم منتجات عالية الجودة وحلول مبتكرة لضمان مياه نقية وصحية للجميع.</p>
-                </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                    <h5>روابط سريعة</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#hero">الرئيسية</a></li>
-                        <li><a href="#products">المنتجات</a></li>
-                        <li><a href="#cta">اتصل بنا</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                                    <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <h5>معلومات الاتصال</h5>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt me-2"></i> العنوان المنصوره اجا </li>
-                        
-                        <!-- رابط الاتصال المباشر (للرن) - تم تصحيحه -->
-                        <li><i class="fas fa-phone me-2"></i> <a href="tel:+201117767717">0111-7767-717</a></li>
-                        
-                        <!-- رابط الواتساب (صحيح كما هو) -->
-                        <li><i class="fab fa-whatsapp me-2"></i> <a href="https://wa.me/201117767717" target="_blank">0111-7767-717</a></li>
-
-                        <!-- رابط البريد الإلكتروني (صحيح كما هو) -->
-                        <li><i class="fas fa-envelope me-2"></i> <a href="mailto:rightwater156@gmail.com">rightwater156@gmail.com</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                    <h5>تابعنا</h5>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/share/1CUSbMFhZV/"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center footer-bottom">
-                <p class="mb-0">© 2024 Right Water. جميع الحقوق محفوظة.</p>
-            </div>
-        </div>
+    <footer class="text-center py-5 text-muted">
+        <hr class="container">
+        <p>© 2024 جميع الحقوق محفوظة - البدروم كافيه المنصورة</p>
     </footer>
-    
-    <!-- Bootstrap & JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JSON-LD للتعريف بجوجل (SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "البدروم كافيه - El-Badroom Cafe",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "المنصورة",
+        "addressCountry": "EG"
+      },
+      "telephone": "+201117767717",
+      "servesCuisine": "Beverages, Snacks, Hookah"
+    }
+    </script>
+
+    <script>
+        const REDIS_URL = "https://ultimate-ferret-48101.upstash.io";
+        const REDIS_TOKEN = "AbvlAAIncDEzYTgwNjBhYTRjNzI0N2NiODZjZGEwY2ZmMmIxOGI2YnAxNDgxMDE=";
+        const KEY = "badroom_final_seo_v1";
+
+        let menuData = [];
+        const cats = {
+            cold: "مشروبات باردة بأنواعها",
+            hot: "مشروبات ساخنة بأنواعها",
+            sweets: "حلويات",
+            snacks: "سناكس",
+            shisha: "شيشه",
+            ps: "بلاى ستيشن"
+        };
+
+        function checkAdmin() {
+            const p = new URLSearchParams(window.location.search);
+            if(p.get('manage') === 'true') { localStorage.setItem('badroom_manager', 'yes'); window.history.replaceState({}, '', window.location.pathname); }
+            return localStorage.getItem('badroom_manager') === 'yes';
+        }
+
+        const isManager = checkAdmin();
+
+        async function loadData() {
+            toggleLoader(true);
+            try {
+                const res = await fetch(`${REDIS_URL}/get/${KEY}`, { headers: { Authorization: `Bearer ${REDIS_TOKEN}` } });
+                const data = await res.json();
+                menuData = data.result ? JSON.parse(data.result) : [];
+                render();
+            } catch(e) { console.error("Error loading"); }
+            toggleLoader(false);
+        }
+
+        async function sync() {
+            toggleLoader(true);
+            await fetch(`${REDIS_URL}/set/${KEY}`, {
+                method: 'POST',
+                headers: { Authorization: `Bearer ${REDIS_TOKEN}` },
+                body: JSON.stringify(menuData)
+            });
+            render();
+            toggleLoader(false);
+        }
+
+        function render() {
+            const content = document.getElementById('menu-content');
+            const nav = document.getElementById('nav-bar');
+            let h = ''; let n = '';
+
+            if(isManager) document.getElementById('admin-panel').style.display = 'block';
+
+            for(let k in cats) {
+                const items = menuData.filter(i => i.cat === k);
+                n += `<a href="#sec-${k}" class="nav-link-custom">${cats[k]}</a>`;
+                h += `<section id="sec-${k}"><h2 class="fw-black mt-5 mb-4" style="border-right: 5px solid var(--gold); padding-right: 15px;">${cats[k]}</h2>`;
+                
+                if(items.length === 0) {
+                    h += `<p class="text-muted ms-3 small">قريباً سيتم إضافة أصناف جديدة...</p>`;
+                } else {
+                    items.forEach(item => {
+                        h += `
+                            <div class="menu-item">
+                                <div class="item-info">
+                                    <h2>${item.name}</h2>
+                                    ${isManager ? `<button class="btn btn-link text-danger p-0 btn-sm" onclick="deleteItem(${item.id})"><i class="fas fa-trash"></i> حذف</button>` : ''}
+                                </div>
+                                <div class="price-tag">${item.price} <small style="font-size: 0.7rem;">ج.م</small></div>
+                            </div>
+                        `;
+                    });
+                }
+                h += `</section>`;
+            }
+            content.innerHTML = h;
+            nav.innerHTML = n;
+        }
+
+        function addNewItem() {
+            const name = document.getElementById('itemName').value;
+            const price = document.getElementById('itemPrice').value;
+            const cat = document.getElementById('itemCat').value;
+            if(!name || !price) return alert("الرجاء إدخال البيانات كاملة");
+            menuData.push({ id: Date.now(), name, price, cat });
+            sync();
+            document.getElementById('itemName').value = ''; 
+            document.getElementById('itemPrice').value = '';
+        }
+
+        function deleteItem(id) {
+            if(confirm("هل أنت متأكد من الحذف؟")) { 
+                menuData = menuData.filter(i => i.id !== id); 
+                sync(); 
+            }
+        }
+
+        function exitAdmin() { localStorage.removeItem('badroom_manager'); location.reload(); }
+        function toggleLoader(s) { document.getElementById('loader').style.display = s ? 'flex' : 'none'; }
+
+        loadData();
+    </script>
 </body>
 </html>
